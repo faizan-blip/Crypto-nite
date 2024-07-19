@@ -137,14 +137,23 @@ const Hero = () => {
                 </TableBody>
               </Table>
               <TablePagination
-                rowsPerPageOptions={[5]}
-                component="div"
-                count={cryptoData.length}
-                rowsPerPage={rowsPerPage}
-                page={page}
-                onPageChange={handleChangePage}
-                onRowsPerPageChange={handleChangeRowsPerPage}
-              />
+  rowsPerPageOptions={[5]}
+  component="div"
+  count={cryptoData.length}
+  rowsPerPage={rowsPerPage}
+  page={page}
+  onPageChange={handleChangePage}
+  onRowsPerPageChange={handleChangeRowsPerPage}
+  sx={{
+    '.MuiTablePagination-selectLabel, .MuiTablePagination-displayedRows': {
+      color: isDarkmode ? '#e2e2e2' : '#7e7e7e',
+    },
+    '.MuiTablePagination-actions svg': {
+      color: isDarkmode ? '#e2e2e2' : '#7e7e7e',
+    },
+  }}
+/>
+
             </TableContainer>
           )}
         </Card>
