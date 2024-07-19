@@ -22,7 +22,10 @@ export async function GET(req, res) {
       })
     } catch (error) {
       console.error('Error fetching data:', error);
-      res.status(500).json({ error: 'Error fetching data' });
+      return new Response({
+        status: 500,
+        error:"Error in fetching data"
+      })
     }
   }
   
