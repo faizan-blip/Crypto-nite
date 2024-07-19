@@ -70,7 +70,7 @@ const Hero = () => {
   };
 
   return (
-    <Stack flexDirection="row" gap="1em" flexWrap={{lg:"nowrap" , xs:"wrap"}}>
+    <Stack flexDirection={{lg:"row" , xs:"column"}} gap="1em" flexWrap={{lg:"nowrap" , xs:"wrap"}}>
       <Stack flexDirection="column" width={{lg:"70%" , xs:"auto"}} gap="1em" flexGrow={{lg:"none" , xs:"1"}}>
         {isLoading ? (
           <Card sx={{ height: "60vh", background: isDarkmode ? '#121212' : '#fff', display: 'flex', justifyContent: "center", alignItems: "center" }}>

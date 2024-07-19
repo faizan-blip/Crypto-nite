@@ -62,7 +62,7 @@ const Explore = () => {
       
     return ( 
         <>
-         <Stack flexDirection="row" gap="1em" height='100vh' flexWrap={{lg:"nowrap" , xs:"wrap"}}>
+         <Stack flexDirection={{lg:"row" , xs:"column"}} gap="1em" height='100vh' flexWrap={{lg:"nowrap" , xs:"wrap"}}>
       <Stack flexDirection="column" width={{lg:"70%" , xs:"auto"}} gap="1em">
       <Card sx={{ maxHeight: "90vh", background: isDarkmode ? '#121212' : '#fff', overflowY: "scroll" }}>
           {isLoading ? (

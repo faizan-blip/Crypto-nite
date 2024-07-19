@@ -78,7 +78,7 @@ const Product = () => {
       };
     return (
         <>
-            <Stack flexDirection='row' gap="1em" height='100vh' flexWrap={{lg:"nowrap" , xs:"wrap"}}>
+            <Stack flexDirection={{lg:"row" , xs:"column"}} gap="1em" height='100vh' flexWrap={{lg:"nowrap" , xs:"wrap"}}>
                 <Stack flexDirection="column" width={{ lg: "70%", xs: "auto" }} gap="1em" flexGrow={{lg:"none" , xs:"1"}}>
                     <Stack flexDirection='row' gap="1em" width='100%'>
                    

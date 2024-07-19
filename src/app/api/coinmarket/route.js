@@ -1,4 +1,4 @@
-export async function GET(req, res) {
+export async function GET() {
     const api = process.env.NEXT_PUBLIC_CMC_API_KEY;
     const baseurl = `https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest`;
     console.log(process.env.NEXT_PUBLIC_CMC_API_KEY);
