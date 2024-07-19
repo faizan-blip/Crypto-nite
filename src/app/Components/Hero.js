@@ -70,8 +70,8 @@ const Hero = () => {
   };
 
   return (
-    <Stack flexDirection={{lg:"row" , xs:"column"}} gap="1em" flexWrap={{lg:"nowrap" , xs:"wrap"}}>
-      <Stack flexDirection="column" width={{lg:"70%" , xs:"auto"}} gap="1em" flexGrow={{lg:"none" , xs:"1"}}>
+    <Stack flexDirection={{lg:"row" , xs:"column"}} gap="1em" flexWrap={{lg:"nowrap" , xs:"wrap"}} >
+      <Stack flexDirection="column"width={{lg:"70%"  , sm:"100%" , xs:"300px"}} gap="1em" flexGrow={{lg:"none" , xs:"1"}}>
         {isLoading ? (
           <Card sx={{ height: "60vh", background: isDarkmode ? '#121212' : '#fff', display: 'flex', justifyContent: "center", alignItems: "center" }}>
             <Skeleton animation="wave" variant="rectangular" width="100%" height="100%" />
@@ -97,7 +97,7 @@ const Hero = () => {
 
           </Card>
         )}
-        <Card sx={{ maxHeight: "50vh", background: isDarkmode ? '#121212' : '#fff', overflowY: "scroll" }}>
+        <Card sx={{ maxHeight: "50vh", background: isDarkmode ? '#121212' : '#fff', overflow: "scroll" }}>
           {isLoading ? (
             <Skeleton animation="wave" variant="rectangular" width="100%" height="40vh" />
           ) : (

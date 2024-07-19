@@ -256,7 +256,7 @@ const AppBar = styled(MuiAppBar, {
       ))}
     </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1, p: 3  , background:isDarkmode ? '#2a2929' : '#f7f7f7'}}>
+      <Box component="main" sx={{ flexGrow: 1, p: 3  , background:isDarkmode ? '#2a2929' : '#f7f7f7' , minHeight:"100vh" , height:"100%"}}>
         <DrawerHeader />
      {
         pathname === '/' ? (

@@ -78,29 +78,29 @@ const Product = () => {
       };
     return (
         <>
-            <Stack flexDirection={{lg:"row" , xs:"column"}} gap="1em" height='100vh' flexWrap={{lg:"nowrap" , xs:"wrap"}}>
+            <Stack flexDirection={{lg:"row" , xs:"column"}} gap="1em" >
                 <Stack flexDirection="column" width={{ lg: "70%", xs: "auto" }} gap="1em" flexGrow={{lg:"none" , xs:"1"}}>
                     <Stack flexDirection='row' gap="1em" width='100%'>
                    
                     <Card sx={{ display: "flex", flexDirection: "column", padding: "1.5em 1.5em" , background:isDarkmode ? '#121212' : '#fff' ,width:"100%"}}>
                         <Stack flexDirection='column' >
                         <Typography variant="h6" color='#6418c3' fontWeight='700'>{productData.name}</Typography>
-                        <Stack flexDirection='row' gap='0.5em' alignItems='center'>
+                        <Stack flexDirection={{sm:"row" , xs:"column"}} gap='0.5em' alignItems='start'>
                             <Typography variant="h7" color={isDarkmode ? '#fff' : '#121212'} fontWeight="700">${productData.quote?.USD?.price.toFixed(2)}</Typography>
                             {productData.quote.USD.volume_change_24h < 0 ? (
-                                <Typography component="span" sx={{ color: '#ff2e2e', display: 'flex', alignItems: 'center', gap: "0.5em", background: "#fff0f0", padding: "0.5em 0.5em"  , borderRadius:"10px"}}>
+                                <Typography component="span" sx={{ color: '#ff2e2e', display: 'flex', alignItems: 'center', gap: "0.5em", background: "#fff0f0", padding: "0.5em 0.5em"  , borderRadius:"10px",  fontSize:{sm:"14px" , xs:"12px"}}}>
                                     <ArrowDownwardIcon sx={{ fontSize: 'small', color: '#ff2e2e' }} />
                                     {productData.quote.USD.percent_change_24h.toFixed(2)} % Today
                                 </Typography>
                             ) : (
-                                <Typography component="span" sx={{ color: '#2bc155', display: 'flex', alignItems: 'center', gap: "0.5em", background: "#e7faec", padding: "0.5em 0.5em" , borderRadius:"10px" }}>
+                                <Typography component="span" sx={{ color: '#2bc155', display: 'flex', alignItems: 'center', gap: "0.5em", background: "#e7faec", padding: "0.5em 0.5em" , borderRadius:"10px",  fontSize:{sm:"14px" , xs:"12px"} }}>
                                     <ArrowUpwardIcon sx={{ fontSize: 'small', color: '#2bc155' }} />
                                     {productData.quote.USD.percent_change_24h.toFixed(2)} % Today
                                 </Typography>
                             )}
                         </Stack>
                         </Stack>
-                        <Stack flexDirection='column' gap='0.5em'  marginTop='0.7em'>
+                        <Stack flexDirection='column' gap='0.5em'  marginTop='1em'>
                         <Typography variant="body2" color= {isDarkmode ? '#e2e2e2' : '#7e7e7e'} fontWeight="700">
   Market Cap : ${Math.round(productData.quote.USD.market_cap)}
 </Typography>
